@@ -1,0 +1,856 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --main-color: #1c96fa;
+    --main-color-second: #1c96fa;
+    --second-tex-color: #18ebd9;
+    --principal-color:#79F297;
+    --background:#1e2326;
+    --background2: #252A2E;
+    --text-color: #ffffff;
+    --second-bg-color: #9dfff2;
+}
+html{
+    /* me permite deslizar cuando hago clic en los links del menu */
+    scroll-behavior: smooth;
+}
+/* MENU */
+.contenedor-header{
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-clip: text;
+}
+.contenedor-header header .logo a {
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #ffffff;
+    text-decoration: none;
+}
+pspan1{
+    font-family: 'Righteous';
+    font-size: 36px;
+    text-decoration: none;
+    background: linear-gradient(
+        70deg,
+        #1CB698 10%,
+        #1c5ab6 100%
+    );
+    background-clip: text;
+    color: transparent;
+    transition: transform 0.3s ease; /* Suaviza el efecto al crecer */
+}
+pspan1:hover{
+    transform: scale(1.5s);
+}
+
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover{
+    color: #1CB698;
+}
+.nav-responsive{
+    background-color: #1CB698;
+    color:#fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/* SECCION INICIO */
+.inicio {
+    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
+    url(img/fondo.jpg);
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center top; /* Centra la imagen y asegura que no se corte por arriba */
+    height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido vertical y horizontal */
+    padding: 0 20px; /* Espaciado pequeño a los lados para pantallas pequeñas */
+    position: relative; /* Para permitir el ajuste dinámico de los elementos */
+}
+
+.inicio .contenido-banner {
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del espacio disponible */
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamientos */
+}
+
+.inicio .contenido-banner img {
+    margin-top: 40px;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 50%; /* Hace la imagen redonda */
+    box-shadow: 0 0 20px #ff0080;
+    transition: 0.4s ease-in-out;
+
+    /* Borde degradado de arriba hacia abajo */
+    padding: 10px; /* Espesor del borde */
+    background: linear-gradient(to bottom, #61036d, #f102aa); /* Degradado vertical */
+    background-clip: border-box;
+    box-sizing: border-box;
+}
+
+.inicio .contenido-banner img:hover {
+    box-shadow: 0 0 10px var(--main-color-second),
+                0 0 25px var(--main-color),
+                0 0 35px var(--main-color);
+}
+
+.inicio .contenido-banner h1 {
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Righteous';
+    background: linear-gradient(70deg, #61036d 10%, #f102aa 100%);
+    background-clip: text;
+    color: transparent;
+    transition: transform 0.3s ease; /* Suaviza el efecto al crecer */
+}
+
+.text-animation {
+    font-size: 15px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.text-animation span {
+    position: relative;
+}
+
+.text-animation span::before {
+    content: "Videojuegos";
+    color: var(--principal-color);
+    animation: words 20s infinite;
+}
+
+.text-animation span::after {
+    content: "";
+    background-color: var(--background);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--background);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 32s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid var(--principal-color);
+    }
+}
+
+@keyframes words {
+    0%, 40% {
+        content: "Diseñadora UI/UX";
+    }
+    41%, 70% {
+        content: "TechArt";
+    }
+    71%, 100% {
+        content: "Desarrolladora de Videojuegos";
+    }
+}
+
+@keyframes typing {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%, 100% {
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+        width: calc(100% + 8px);
+    }
+}
+
+.inicio .contenido-banner .redes a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.inicio .contenido-banner .redes a:hover {
+    background-color: #1CB698;
+}
+
+.sobremi{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: justify;
+}
+.sobremi .contenido-seccion{
+    max-width: 1000px;
+    margin: auto;
+}
+.sobremi h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+
+.sobremi .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.sobremi .contenido-seccion p span{
+    color: #1CB698;
+    font-weight: bold;
+}
+.sobremi .fila{
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    gap: 10px
+    
+
+}
+.sobremi .fila .col
+{
+    width: 55%;
+}
+.sobremi .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.sobremi .fila .col ul{
+    list-style: none;
+}
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+}
+.sobremi .fila .col ul li strong{
+    display: inline-block;
+    color: #1CB698;
+    width: 130px;
+}
+.sobremi .fila .col ul li span{
+    background-color: #1CB698;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.sobremi .fila .col .contenedor-intereses{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 10px; /* Espaciado entre los elementos */
+
+}
+.imagen-ilustracion{
+    width: 280px; /* Ajusta el ancho */
+    height: 280px; /* Ajusta la altura */
+    border-radius: 10%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Recorta la imagen sin distorsionarla */
+    position: relative;
+    right: -50px;
+    padding: 14px;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes{
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    transition: .3s;
+    
+}
+
+.sobremi .fila .col .contenedor-intereses .interes:hover{
+    background-color: #1CB698;
+   
+}
+.sobremi .fila .col .contenedor-intereses .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+   
+}
+.sobremi button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+   
+    
+    
+}
+.sobremi button .overlay{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1CB698;
+    z-index: -1;
+    transition: 1s;
+
+    
+}
+.sobremi button:hover .overlay{
+    width: 100%;
+    
+    
+}
+/* SECCION SKILLS */
+.skills {
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+.skills .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+.skills h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.skills .fila {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espaciado entre columnas */
+}
+.skills .fila .col {
+    width: 48%; /* Ajustado para que queden bien alineadas */
+    padding: 0 20px;
+}
+.skills .fila .col h3 {
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+    text-align: center; /* Centrar el título */
+}
+.skills .skill {
+    background-color: #1E2429; /* Fondo del recuadro */
+    border: 1px solid #1CB698; /* Borde del recuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction:initial; /* Colocar ícono y texto en columna */
+    align-items: center; /* Centrar contenido horizontalmente */
+    justify-content: center; /* Centra contenido verticalmente */
+    text-align:justify;
+    transition: 0.3s;
+    gap: 10px;
+    
+}
+.skills .skill:hover {
+    background-color: #1CB698; /* Cambiar color al pasar el mouse */
+    color: #252A2E; /* Cambiar color del texto */
+}
+.skills .skill i {
+    font-size: 28px; /* Tamaño del ícono */
+    margin-bottom:5px; /* Espacio debajo del ícono */
+}
+.skills .skill > span {
+    font-weight: bold;
+    font-size: 18px; /* Tamaño del texto */
+}
+
+
+/* SECCION CURRICULUM */
+.curriculum{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.curriculum .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.curriculum h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+.curriculum .fila{
+    display: flex;
+    justify-content: space-between;
+}
+.curriculum .fila .col{
+    width: 49%;
+    padding: 0 20px;
+}
+.curriculum .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.curriculum .fila .izquierda{
+    border-right: 2px solid #252A2E;
+}
+.curriculum .fila .derecha{
+    border-left: 2px solid #252A2E;
+}
+.curriculum .fila .item{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #252A2E;
+    position: relative;
+}
+.curriculum .fila .item h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.curriculum .fila .item .casa{
+    color: #1CB698;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+.curriculum .fila .item .fecha{
+    display: block;
+    color: #1CB698;
+    margin-bottom: 10px;
+}
+.curriculum .fila .item p{
+    line-height: 24px;
+}
+.curriculum .fila .izq{
+    border-right: 2px solid #1CB698;
+    margin-right: 20px;
+}
+.curriculum .fila .der{
+    border-left: 2px solid #1CB698;
+    margin-left: 20px;
+}
+.curriculum .fila .item .conectori{
+    height: 2px;
+    background-color: #1CB698;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    right: -47px;
+    z-index: 5;
+}
+.curriculum .fila .item .conectori .circuloi{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #1CB698;
+    float: right;
+    position: relative;
+    bottom: 4px;
+}
+.curriculum .fila .item .conectord{
+    height: 2px;
+    background-color: #1CB698;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    left: -47px;
+    z-index: 5;
+}
+.curriculum .fila .item .conectord .circulod{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #1CB698;
+    float: left;
+    position: relative;
+    bottom: 4px;
+}
+/* SECCION PORTFOLIO */
+/*.portfolio{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+.portfolio .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.portfolio h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.portfolio .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.portfolio .galeria .proyecto{
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.portfolio .galeria .proyecto img{
+    width: 100%;
+    display: block;
+}
+.portfolio .galeria .proyecto .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+.portfolio .galeria .proyecto .overlay h3{
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.portfolio .galeria .proyecto .overlay:hover{
+    opacity: 1;
+}
+.portfolio .galeria .proyecto .overlay:hover h3{
+    margin-bottom: 0px;
+}*/
+
+
+/* Portafolio */
+
+.portafolio {
+    background-color: var(--background2);
+    color: var(--text-color);
+    padding: 50px 100px; /* Ajustar el padding para que haya menos espacio alrededor */
+}
+
+.portafolio h2 {
+    font-size: 36px; /* Reducido el tamaño del título */
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.portafolio-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 4 columnas fijas */
+    gap: 1rem; /* Reducir el espacio entre las cartas */
+    align-items: stretch;
+}
+
+.portafolio-box {
+    display: block;
+    place-items: center;
+    gap: 1.5rem; /* Reducido el gap entre los elementos internos */
+}
+
+.portafolio-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Asegura que el contenido se distribuya bien */
+    text-align: center;
+    background-color: var(--background2);
+    border: 2px solid var(--principal-color);
+    border-radius: 1.5rem; /* Reducir el borde para que se vea más compacto */
+    gap: 0rem; /* Reducir el espacio entre los elementos */
+    padding: 1rem; /* Reducir el padding para hacer la carta más pequeña */
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--principal-color);
+    transition: 0.3s ease;
+    height: auto;
+}
+
+.portafolio-card:hover {
+    box-shadow: 0 0 25px var(--principal-color), 0 0 50px var(--principal-color);
+    transform: scale(1.02);
+}
+
+.portafolio-card img {
+    width: 100%; /* Ajusta la imagen al tamaño del contenedor */
+    max-height: 180px; /* Reducir la altura máxima de la imagen */
+    object-fit: contain; /* Mantener las proporciones de la imagen */
+    border-radius: 1rem;
+}
+
+.portafolio-card h3 {
+    font-size: 1.2rem; /* Reducir el tamaño del título */
+    font-family: 'Righteous';
+    margin: 0;
+}
+
+.portafolio-card p {
+    font-size: 0.8rem; /* Reducir el tamaño del texto */
+    text-align: justify;
+    margin: 0;
+    padding: 0 0.1rem;
+    flex-grow: 1;
+}
+
+.btn {
+    background-color: var(--principal-color);
+    box-shadow: 0 0 25px var(--principal-color);
+    cursor: pointer;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 8px 18px; /* Reducir el padding para el botón */
+    font-size: 1rem; /* Reducir el tamaño del texto del botón */
+    color: var(--background);
+    position: relative;
+    z-index: 10;
+    border-radius: 3rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--principal-color), 0 0 50px var(--principal-color);
+}
+
+
+/* SECCION CONTACTO */
+ /* SECCION CONTACTO */
+    .contacto {
+        background-image: url(img/contact_bg.png);
+        background-color: #1e2326;
+        color: #fff;
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .contacto h2 {
+        font-size: 48px;
+        font-family: 'Righteous';
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .contacto .col .info ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .contacto .col .info ul li {
+        margin-bottom: 20px;
+    }
+
+    .contacto .col .info ul li i {
+        color: #1CB698;
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+        background-color: #252a2e;
+        color: #fff;
+        padding: 30px 0;
+        text-align: center;
+        position: relative;
+        width: 100%;
+    }
+
+    
+
+    footer .redes a {
+        color: #fff;
+        display: inline-block;
+        text-decoration: none;
+        border: 1px solid #fff;
+        border-radius: 100%;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        margin: 10px;
+        font-size: 20px;
+        transition: .3s;
+    }
+
+    footer .arriba {
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: #1CB698;
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -25px;
+        border-radius: 50%;
+        line-height: 50px;
+        font-size: 18px;
+    }
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
+    }
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
+
+    .curriculum .fila{
+        display: block;
+    }
+    .curriculum .fila .col{
+        width: 90%;
+    }
+    .curriculum .fila .derecha{
+        margin-left: 20px;
+    }
+
+    .portfolio .galeria{
+        display: block;
+        width: 100%;
+    }
+    .portfolio .galeria .proyecto{
+        max-width: 100%;
+    }
+    .portfolio .galeria .proyecto img{
+        width: 100%;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+    }
+    /* Animación de entrada */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Aplicar animación a los elementos */
+  #inicio, #sobremi, #skills, #curriculum, #portfolio {
+    animation: fadeIn 2s ease-out forwards;
+    opacity: 0;
+  }
+  
+  #inicio.visible, #sobremi.visible, #skills.visible, #curriculum.visible, #portfolio.visible {
+    opacity: 1;
+  }
+  
+  .skill, .portafolio-card {
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideUp 1s forwards;
+  }
+  
+  .skill.visible, .portafolio-card.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  
+  
+}

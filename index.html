@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Portfolio PB</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Pao <pspan1>Ballen</pspan1>
+                </a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portafolio" onclick="seleccionar()">PORTAFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="Imagenes/FP1.png" alt="">
+            </div>
+            <h1>PAOLA BALLÉN</h1>
+            <h2 class="text-animation">Yo soy <span></span></h2>
+            <div class="redes">          
+                <a href="https://www.linkedin.com/in/paola-ballen/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://paobal.itch.io/" target="_blank"><i class="fab fa-itch-io"></i></a>
+                <a href="https://github.com/paob92" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.artstation.com/user-paoballen" target="_blank"><i class="fab fa-artstation"></i></a> 
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+ <section id="sobremi" class="sobremi">
+    <div class="contenido-seccion">
+        <h2>Sobre Mí</h2>
+        <p><span>Hola, soy Paola Ballén.</span> Soy desarrolladora de videojuegos y diseñadora UI/UX, con más de dos años de experiencia, especializada en crear experiencias visuales atractivas y funcionales. Mi pasión por los videojuegos y la tecnología me impulsa a crecer como Technical Artist, combinando habilidades técnicas y creativas para diseñar interfaces innovadoras y efectos visuales impactantes. He liderado equipos en game jams internacionales, representado a Women in Games como embajadora para Colombia, y contribuido a proyectos que fortalecen la industria y su talento humano. Mi trabajo se caracteriza por la perseverancia, la responsabilidad, una gestión eficiente del tiempo y un enfoque colaborativo que fomenta el éxito del equipo. Me motiva transformar ideas en soluciones que no solo destacan, sino que también impulsan el crecimiento de las comunidades que las hacen posibles.</p>
+
+        
+        <div class="fila">
+            <!-- imagen -->
+            <div class="imagen-ilustracion">
+                <img src="Imagenes/FP2.png" alt=""class="imagen-ilustracion">
+            </div>
+            <!-- intereses -->
+            <div class="col">
+                <h3>Intereses</h3>
+                <div class="contenedor-intereses">
+                    <div class="interes">
+                        <i class="fa-solid fa-gamepad"></i>
+                        <span>Videojuegos</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-headphones"></i>
+                        <span>Música</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Estudio</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-palette"></i>
+                        <span>Pintar</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid  fa-leaf"></i>
+                        <span>Naturaleza</span>
+                    </div>
+                     <div class="interes">
+                        <i class="fa-solid fa-person-hiking"></i>
+                        <span>Deporte</span>
+                    </div>              
+                </div>
+            </div>
+        </div>
+            
+                <button onclick="window.location.href='//drive.google.com/file/d/1dQY3qPym1uI2YlH6TrLcMQ2XTVFy8ccx/view?usp=sharing'">
+                    Descargar CV <i class="fa-solid fa-download"></i>
+                    <span class="overlay"></span>
+                </button>
+        </div>
+    </section>
+
+<!-- SECCION SKILLS -->
+<section class="skills" id="skills">
+    <div class="contenido-seccion">
+        <h2>Skills</h2>
+        <div class="fila">
+            <!-- Technical Skills -->
+            <div class="col">
+                <h3>Technical Skills</h3>
+                <div class="skill">
+                    <i class="fa-brands fa-unity"></i>
+                    <span>Unity</span>
+
+                </div>
+                <div class="skill">
+                    <i class="fa-solid fa-code"></i>
+                    <span>C#</span>
+                </div>
+                <div class="skill">
+                    <i class="fa-brands fa-git-alt"></i>
+                    <span>Git</span>
+                </div>
+                <div class="skill">
+                    <i class="fa-solid fa-cube"></i>
+                    <span>Blender</span>
+                </div>
+                <div class="skill">
+                    <i class="fa-solid fa-paintbrush"></i>
+                    <span>Adobe </span>
+                </div>
+            </div>
+            <!-- Professional Skills -->
+            <div class="col">
+                <h3>Professional Skills</h3>
+                <div class="skill">
+                    <i class="fa-solid fa-comments"></i>
+                    <span>Comunicación</span>
+                </div>
+                <div class="skill">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Trabajo en Equipo</span>
+                </div>
+                <div class="skill">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span>Creatividad</span>
+                </div>
+                <div class="skill">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Proactividad</span>
+                </div>
+                <div class="skill">
+                    <i class="fa-solid fa-mountain-sun"></i>
+                    <span>Persistencia</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Tecnólogo en Desarrollo de Videojuegos y Entornos Interactivos</h4>
+                        <span class="casa">Sena</span>
+                        <span class="fecha">En Curso</span>
+                        <p>Formación especializada en programación, diseño de videojuegos y creación de gráficos 2D y 3D. Competencias en el uso de herramientas y tecnologías clave para el desarrollo de experiencias interactivas innovadoras y atractivas.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Quality Control + Automation</h4>
+                        <span class="casa">Globant</span>
+                        <span class="fecha">Mar-Dic 2023</span>
+                        <p>Formación en pruebas de calidad, automatización y corrección de errores, aplicable al desarrollo de videojuegos para garantizar productos de alta calidad, optimizar la experiencia del usuario y fomentar la colaboración en equipos multidisciplinarios.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Desarrollador Junior Unity </h4>
+                        <span class="casa">Generation</span>
+                        <span class="fecha">Mar-Jun 2023</span>
+                        <p>Beca virtual en Unity y C#, enfocada en desarrollar habilidades técnicas y creativas para la creación de videojuegos, complementadas con el fortalecimiento de habilidades blandas como trabajo en equipo, resolución de problemas y gestión del tiempo.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Mercadología</h4>
+                        <span class="casa">Universidad Central</span>
+                        <span class="fecha">Abr 2019- Abr 2021</span>
+                        <p>Adquirí habilidades en marketing, gestión de proyectos y desarrollo de comunidades, que me permiten crear estrategias para el éxito de los juegos, gestionar equipos y fomentar la participación en game jams y comunidades de desarrolladores.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Instructora Asistente / Unity
+                        </h4>
+                        <span class="casa">Generation / Colombia</span>
+                        <span class="fecha"> Dic 2023 - Actualidad</span>
+                        <p>Lidero sesiones técnicas, orientando a estudiantes en su desarrollo académico y profesional en la industria de videojuegos, impactando tres cohortes y facilitando su entrada al sector con habilidades técnicas y personales para trayectorias exitosas.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Organizadora de Perú</h4>
+                        <span class="casa">Game Jam Plus /  Perú, Brasil</span>
+                        <span class="fecha">Jul 2022- Actualidad</span>
+                        <p>Organizo Game Jam Plus en Perú, reuniendo a más de 400 participantes y llevando a 6 equipos peruanos a la final mundial. Un equipo ganó el premio al Mejor Juego Latam, lo que aumentó significativamente la visibilidad de los desarrolladores locales.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Coordinadora y Coorganizadora</h4>
+                        <span class="casa">Tan Grande y Jugando / Colombia</span>
+                        <span class="fecha"> Oct 2021 - Actualidad</span>
+                        <p>Colaboro en eventos clave para el desarrollo de la industria de videojuegos en Colombia, promoviendo la inclusión de la comunidad LGBTQ+ ,la inclusión de mujeres y niñas, aumentando la representación femenina del 2% al 30%.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Co-fundadora / Project Manager</h4>
+                        <span class="casa">Reactivity Studios</span>
+                        <span class="fecha"> Oct 2020 - Actualidad</span>
+                        <p>Dirijo el diseño de interfaces y la gestión de proyectos con metodologías ágiles, asegurando entregas de alta calidad. Implemento estrategias innovadoras de contenido para estudios de videojuegos extranjeros, aumentando su reconocimiento y fortaleciendo sus comunidades.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTAFOLIO -->
+     <section class="portafolio" id="portafolio">
+        <div class="contenido-seccion">
+
+            <h2>PORTAFOLIO</h2>
+            <div class="portafolio-box">
+
+                <div class="portafolio-container">
+                    <div class="portafolio-card">
+                        <img src="Imagenes/NTXLogo.png"alt="" >
+
+                        <h3>Ilustraciones</h3>
+
+                        <p>Te invito a conocer mis proyectos en diseño de UI/UX y creación de shaders, donde mejoro experiencias visuales en videojuegos mientras desarrollo mi perfil como Tech Artist.</p>
+                        <a href="https://www.artstation.com/user-paoballen" class="btn">Ver Proyecto</a>
+                    </div>
+
+                    
+                        
+                    <div class="portafolio-card">
+                        <img src="Imagenes/GGJ.png"alt="" >
+
+                        <h3>Show Me What You Got</h3>
+
+                        <p>Enfréntate a Trosky, el payaso intergaláctico, y demuestra tus habilidades para salvar tu mundo. Participé en la creación de UI/UX y shaders.</p>
+                        <a href="https://paobal.itch.io/show-me-what-you-got" class="btn">Ver Proyecto</a>
+                    </div>
+                    
+
+                    <div class="portafolio-card">
+                        <img src="Imagenes/ghatto.png"alt="" >
+
+                        <h3>Ghatto</h3>
+
+                        <p> Roba comida para mantener a tu humano feliz y evitar que pase hambre. Mi rol fue desarrollar la UI/UX e integración en el motor de juego.</p>
+                        <a href="https://paobal.itch.io/ghatto" class="btn">Ver Proyecto</a>
+                    </div>
+
+                    <div class="portafolio-card">
+                        <img src="Imagenes/edy1De.png"alt="" >
+
+                        <h3>Braveheart Feelings</h3>
+
+                        <p>"Raveheart Feelings" Es un juego que empodera a las jóvenes a aceptar y sentirse orgullosas de su ciclo menstrual. Fui diseñadora de UI/UX, creando la experiencia visual y elementos 2D/3D en Unity.</p>
+                        <a href="https://paobal.itch.io/braveheart-feelings" class="btn">Ver Proyecto</a>
+                    </div>
+
+                    <div class="portafolio-card">
+                        <img src="Imagenes/FOF2.png"alt="" >
+
+                        <h3>Friends of the Farm</h3>
+
+                        <p>Juego de cartas infantil para estimular la imaginación. Lideré el diseño visual y la gestión del proyecto.</p>
+                        <a href="https://paobal.itch.io/friends-of-the-farm" class="btn">Ver Proyecto</a>
+                    </div>
+
+                    <div class="portafolio-card">
+                        <img src="Imagenes/TCC.png"alt="" >
+
+                        <h3>The crazy chicken</h3>
+
+                        <p>En "The Crazy Chicken", ayúdale a recoger monedas y esquivar obstáculos en su loca aventura. Me encargué de la programación, diseño ye integración en Unity.</p>
+                        <a href="https://paobal.itch.io/the-crazy-chicken" class="btn">Ver Proyecto</a>
+                    </div>
+
+                    <div class="portafolio-card">
+                        <img src="Imagenes/IZ.png"alt="" >
+
+                        <h3>Infected Maze</h3>
+
+                        <p>Es un juego donde debes escapar de un laberinto lleno de zombis al encontrar tres llaves. Fui responsable del diseño de UX, gráficos en Unity y coordinación del equipo.</p>
+                        <a href="https://paobal.itch.io/infected-maze" class="btn">Ver Proyecto</a>
+                    </div>
+
+                    <div class="portafolio-card">
+                        <img src="Imagenes/DG.png"alt="" >
+
+                        <h3>The Dino Game</h3>
+
+                        <p>Ayuda a Dino a comer para sobrevivir y evitar la extinción. Fui responsable del diseño de la interfaz y la implementación de sonidos en este proyecto de Unity.</p>
+                        <a href="https://js-studios.itch.io/the-dino-game" class="btn">Ver Proyecto</a>
+                    </div>
+                </div>
+
+               
+               
+            </div>
+
+                
+        </div>
+     </section>
+
+    
+<!-- SECCION CONTACTO -->
+<section id="contacto" class="contacto">
+    <div class="contenido-seccion">
+        <h2>CONTACTO</h2>
+        <div class="col info">
+            <ul>
+                <li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Bogotá, Colombia
+                </li>
+                <li>
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    Llamame: +57-3154821677
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    Email: pballend92@gmail.com
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/paola-ballen/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://paobal.itch.io/" target="_blank"><i class="fab fa-itch-io"></i></a>
+                <a href="https://github.com/paob92" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.artstation.com/user-paoballen" target="_blank"><i class="fab fa-artstation"></i></a> 
+        </div>
+    </footer>
+
+<style>
+   
+</style>
+    <script src="script.js"></script>
+</body>
+</html>
