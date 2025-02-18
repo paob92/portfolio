@@ -7,14 +7,14 @@
 }
 
 :root{
-    --main-color: #1c96fa;
-    --main-color-second: #1c96fa;
-    --second-tex-color: #18ebd9;
-    --principal-color:#79F297;
+    --main-color: #e1b6fc;
+    --main-color-second: #ce8cf8;
+    --second-tex-color: #ce8cf8;
+    --principal-color:#ce8cf8;
     --background:#1e2326;
     --background2: #252A2E;
     --text-color: #ffffff;
-    --second-bg-color: #9dfff2;
+    --second-bg-color: #18e466;
 }
 html{
     /* me permite deslizar cuando hago clic en los links del menu */
@@ -50,8 +50,8 @@ pspan1{
     text-decoration: none;
     background: linear-gradient(
         70deg,
-        #1CB698 10%,
-        #1c5ab6 100%
+        #83c5ff 10%,
+        #ce8cf8 100%
     );
     background-clip: text;
     color: transparent;
@@ -73,8 +73,8 @@ pspan1:hover{
     transition: .5s;
     text-decoration: none;
 }
-.contenedor-header header nav ul li a:hover{
-    color: #1CB698;
+.contenedor-header header nav ul li a:hover{/*LETRA MENU*/
+    color: #83c5ff;
 }
 .nav-responsive{
     background-color: #1CB698;
@@ -117,12 +117,12 @@ pspan1:hover{
     width: 80%;
     margin: auto;
     border-radius: 50%; /* Hace la imagen redonda */
-    box-shadow: 0 0 20px #ff0080;
+    box-shadow: 0 0 20px #ce8cf8;
     transition: 0.4s ease-in-out;
 
     /* Borde degradado de arriba hacia abajo */
     padding: 10px; /* Espesor del borde */
-    background: linear-gradient(to bottom, #61036d, #f102aa); /* Degradado vertical */
+    background: linear-gradient(to bottom, #83c5ff, #ce8cf8); /* Degradado vertical */
     background-clip: border-box;
     box-sizing: border-box;
 }
@@ -137,7 +137,7 @@ pspan1:hover{
     margin-top: 40px;
     font-size: 42px;
     font-family: 'Righteous';
-    background: linear-gradient(70deg, #61036d 10%, #f102aa 100%);
+    background: linear-gradient(70deg, #83c5ff 0.5%, #ce8cf8 100%);
     background-clip: text;
     color: transparent;
     transition: transform 0.3s ease; /* Suaviza el efecto al crecer */
@@ -211,8 +211,9 @@ pspan1:hover{
     transition: .3s;
 }
 
-.inicio .contenido-banner .redes a:hover {
-    background-color: #1CB698;
+.inicio .contenido-banner .redes a:hover {/*cntenido redes*/
+    background-color: #ce8cf8;
+    color: #252A2E;
 }
 
 .sobremi{
@@ -240,7 +241,7 @@ pspan1:hover{
     margin-bottom: 20px;
 }
 .sobremi .contenido-seccion p span{
-    color: #1CB698;
+    color: #83c5ff;
     font-weight: bold;
 }
 .sobremi .fila{
@@ -272,7 +273,7 @@ pspan1:hover{
     width: 130px;
 }
 .sobremi .fila .col ul li span{
-    background-color: #1CB698;
+    background-color: #1ee917;
     padding: 3px;
     font-weight: bold;
     border-radius: 5px;
@@ -308,7 +309,8 @@ pspan1:hover{
 }
 
 .sobremi .fila .col .contenedor-intereses .interes:hover{
-    background-color: #1CB698;
+    background-color: #83c5ff;
+    color: #252A2E
    
 }
 .sobremi .fila .col .contenedor-intereses .interes i{
@@ -338,7 +340,8 @@ pspan1:hover{
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #1CB698;
+    background-color: #83c5ff;/*boton descarga*/
+    color: #252A2E;   
     z-index: -1;
     transition: 1s;
 
@@ -382,7 +385,7 @@ pspan1:hover{
 }
 .skills .skill {
     background-color: #1E2429; /* Fondo del recuadro */
-    border: 1px solid #1CB698; /* Borde del recuadro */
+    border: 1px solid #ce8cf8; /* Borde del recuadro */
     border-radius: 10px; /* Bordes redondeados */
     padding: 15px;
     margin-bottom: 20px;
@@ -396,7 +399,7 @@ pspan1:hover{
     
 }
 .skills .skill:hover {
-    background-color: #1CB698; /* Cambiar color al pasar el mouse */
+    background-color: #ce8cf8; /* Cambiar color al pasar el mouse */
     color: #252A2E; /* Cambiar color del texto */
 }
 .skills .skill i {
@@ -456,30 +459,30 @@ pspan1:hover{
     margin-bottom: 10px;
 }
 .curriculum .fila .item .casa{
-    color: #1CB698;
+    color: #83c5ff;
     font-size: 22px;
     font-weight: bold;
     display: block;
 }
 .curriculum .fila .item .fecha{
     display: block;
-    color: #1CB698;
+    color: #83c5ff;
     margin-bottom: 10px;
 }
 .curriculum .fila .item p{
     line-height: 24px;
 }
 .curriculum .fila .izq{
-    border-right: 2px solid #1CB698;
+    border-right: 2px solid #83c5ff;
     margin-right: 20px;
 }
 .curriculum .fila .der{
-    border-left: 2px solid #1CB698;
+    border-left: 2px solid #83c5ff;
     margin-left: 20px;
 }
 .curriculum .fila .item .conectori{
     height: 2px;
-    background-color: #1CB698;
+    background-color: #83c5ff;
     width: 47px;
     position: absolute;
     top: 50%;
@@ -491,14 +494,14 @@ pspan1:hover{
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #1CB698;
+    background-color: #83c5ff;
     float: right;
     position: relative;
     bottom: 4px;
 }
 .curriculum .fila .item .conectord{
     height: 2px;
-    background-color: #1CB698;
+    background-color: #83c5ff;
     width: 47px;
     position: absolute;
     top: 50%;
@@ -510,7 +513,7 @@ pspan1:hover{
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #1CB698;
+    background-color: #83c5ff;
     float: left;
     position: relative;
     bottom: 4px;
@@ -696,7 +699,7 @@ pspan1:hover{
     }
 
     .contacto .col .info ul li i {
-        color: #1CB698;
+        color: #ce8cf8;
         display: inline-block;
         margin-right: 20px;
     }
@@ -731,7 +734,7 @@ pspan1:hover{
         display: block;
         width: 50px;
         height: 50px;
-        background-color: #1CB698;
+        background-color: #83c5ff;
         color: #fff;
         position: absolute;
         left: 50%;
