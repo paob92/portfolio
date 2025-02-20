@@ -586,36 +586,37 @@ pspan1:hover{
 }
 
 .portafolio h2 {
-    font-size: 36px; /* Reducido el tamaño del título */
+    font-size: 36px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
 }
 
+/* Ajuste de la grilla para que sea responsiva */
 .portafolio-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 4 columnas fijas */
-    gap: 1rem; /* Reducir el espacio entre las cartas */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Se adapta al tamaño */
+    gap: 1rem;
     align-items: stretch;
 }
 
 .portafolio-box {
     display: block;
     place-items: center;
-    gap: 1.5rem; /* Reducido el gap entre los elementos internos */
+    gap: 1.5rem;
 }
 
 .portafolio-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; /* Asegura que el contenido se distribuya bien */
+    justify-content: space-between;
     text-align: center;
     background-color: var(--background2);
     border: 2px solid var(--principal-color);
-    border-radius: 1.5rem; /* Reducir el borde para que se vea más compacto */
-    gap: 0rem; /* Reducir el espacio entre los elementos */
-    padding: 1rem; /* Reducir el padding para hacer la carta más pequeña */
+    border-radius: 1.5rem;
+    gap: 0rem;
+    padding: 1rem;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 0 5px var(--principal-color);
@@ -629,20 +630,20 @@ pspan1:hover{
 }
 
 .portafolio-card img {
-    width: 100%; /* Ajusta la imagen al tamaño del contenedor */
-    max-height: 180px; /* Reducir la altura máxima de la imagen */
-    object-fit: contain; /* Mantener las proporciones de la imagen */
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
     border-radius: 1rem;
 }
 
 .portafolio-card h3 {
-    font-size: 1.2rem; /* Reducir el tamaño del título */
+    font-size: 1.2rem;
     font-family: 'Righteous';
     margin: 0;
 }
 
 .portafolio-card p {
-    font-size: 0.8rem; /* Reducir el tamaño del texto */
+    font-size: 0.8rem;
     text-align: justify;
     margin: 0;
     padding: 0 0.1rem;
@@ -656,8 +657,8 @@ pspan1:hover{
     width: fit-content;
     display: block;
     margin: 20px auto;
-    padding: 8px 18px; /* Reducir el padding para el botón */
-    font-size: 1rem; /* Reducir el tamaño del texto del botón */
+    padding: 8px 18px;
+    font-size: 1rem;
     color: var(--background);
     position: relative;
     z-index: 10;
@@ -671,6 +672,42 @@ pspan1:hover{
     box-shadow: 0 0 25px var(--principal-color), 0 0 50px var(--principal-color);
 }
 
+/* Media Queries para mejorar la responsividad */
+
+/* Ajustes para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .portafolio-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablets */
+    }
+}
+
+/* Ajustes para pantallas pequeñas (móviles grandes) */
+@media (max-width: 768px) {
+    .portafolio-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+        padding: 20px; /* Reducir padding general */
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .portafolio-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 columna en móviles pequeños */
+    }
+
+    .portafolio-card {
+        padding: 0.8rem; /* Reducir padding para mejor ajuste */
+    }
+
+    .portafolio-card img {
+        max-height: 150px; /* Reducir tamaño de imágenes */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Ajustar tamaño del botón */
+        padding: 6px 14px;
+    }
+}
 
 /* SECCION CONTACTO */
  /* SECCION CONTACTO */
